@@ -1,0 +1,42 @@
+---
+title: "PracticalOne"
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+
+```{r}
+rows_with_na <- airquality[!complete.cases(airquality),]
+rows_with_na
+```
+
+```{r}
+mean(na.omit(airquality$Temp))
+sd(na.omit(airquality$Temp))
+min(na.omit(airquality$Temp))
+max(na.omit(airquality$Temp))
+```
+
+```{r}
+mean(na.omit(airquality$Ozone))
+sd(na.omit(airquality$Ozone))
+min(na.omit(airquality$Ozone))
+max(na.omit(airquality$Ozone))
+```
+
+```{r}
+A <- matrix(1,ncol = 1,nrow = 50)
+X <- cbind(A,matrix(cars$speed,ncol=1))
+Y <- matrix(cars$dist,ncol=1)
+part1 <- solve(t(X)%*% X) 
+part2 <- (t(X) %*% Y)
+beta <- part1%*%part2
+beta
+```
+
+```{r}
+carspeedlm <- lm(cars$dist ~ cars$speed)
+summary(carspeedlm)
+```
