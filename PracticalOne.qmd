@@ -30,13 +30,21 @@ max(na.omit(airquality$Ozone))
 A <- matrix(1,ncol = 1,nrow = 50)
 X <- cbind(A,matrix(cars$speed,ncol=1))
 Y <- matrix(cars$dist,ncol=1)
-part1 <- solve(t(X)%*% X) 
-part2 <- (t(X) %*% Y)
-beta <- part1%*%part2
-beta
+
+f <- function(x,y){
+  beta <- solve(t(x)%*% x) %*% (t(x) %*% y)
+  return(list('coefficients'= beta))
+  
+}
+
+b <- f(X,Y)
+b
 ```
 
 ```{r}
 carspeedlm <- lm(cars$dist ~ cars$speed)
 summary(carspeedlm)
+```
+```{r}
+round(carspeedlm$coefficients,5) == round(b$coefficients,5)
 ```
