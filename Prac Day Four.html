@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>PracticalOne</title>
+<title>Prac Day Four</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,16 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="PracticalOne_files/libs/clipboard/clipboard.min.js"></script>
-<script src="PracticalOne_files/libs/quarto-html/quarto.js"></script>
-<script src="PracticalOne_files/libs/quarto-html/popper.min.js"></script>
-<script src="PracticalOne_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="PracticalOne_files/libs/quarto-html/anchor.min.js"></script>
-<link href="PracticalOne_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="PracticalOne_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="PracticalOne_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="PracticalOne_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="PracticalOne_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Prac Day Four_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Prac Day Four_files/libs/quarto-html/quarto.js"></script>
+<script src="Prac Day Four_files/libs/quarto-html/popper.min.js"></script>
+<script src="Prac Day Four_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Prac Day Four_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Prac Day Four_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Prac Day Four_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Prac Day Four_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Prac Day Four_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Prac Day Four_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -79,7 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">PracticalOne</h1>
+<h1 class="title">Prac Day Four</h1>
 </div>
 
 
@@ -97,141 +97,190 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>rows_with_na <span class="ot">&lt;-</span> airquality[<span class="sc">!</span><span class="fu">complete.cases</span>(airquality),]</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>rows_with_na</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    Ozone Solar.R Wind Temp Month Day
-5      NA      NA 14.3   56     5   5
-6      28      NA 14.9   66     5   6
-10     NA     194  8.6   69     5  10
-11      7      NA  6.9   74     5  11
-25     NA      66 16.6   57     5  25
-26     NA     266 14.9   58     5  26
-27     NA      NA  8.0   57     5  27
-32     NA     286  8.6   78     6   1
-33     NA     287  9.7   74     6   2
-34     NA     242 16.1   67     6   3
-35     NA     186  9.2   84     6   4
-36     NA     220  8.6   85     6   5
-37     NA     264 14.3   79     6   6
-39     NA     273  6.9   87     6   8
-42     NA     259 10.9   93     6  11
-43     NA     250  9.2   92     6  12
-45     NA     332 13.8   80     6  14
-46     NA     322 11.5   79     6  15
-52     NA     150  6.3   77     6  21
-53     NA      59  1.7   76     6  22
-54     NA      91  4.6   76     6  23
-55     NA     250  6.3   76     6  24
-56     NA     135  8.0   75     6  25
-57     NA     127  8.0   78     6  26
-58     NA      47 10.3   73     6  27
-59     NA      98 11.5   80     6  28
-60     NA      31 14.9   77     6  29
-61     NA     138  8.0   83     6  30
-65     NA     101 10.9   84     7   4
-72     NA     139  8.6   82     7  11
-75     NA     291 14.9   91     7  14
-83     NA     258  9.7   81     7  22
-84     NA     295 11.5   82     7  23
-96     78      NA  6.9   86     8   4
-97     35      NA  7.4   85     8   5
-98     66      NA  4.6   87     8   6
-102    NA     222  8.6   92     8  10
-103    NA     137 11.5   86     8  11
-107    NA      64 11.5   79     8  15
-115    NA     255 12.6   75     8  23
-119    NA     153  5.7   88     8  27
-150    NA     145 13.2   77     9  27</code></pre>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">na.omit</span>(airquality<span class="sc">$</span>Temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(flights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 77.88235</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(<span class="fu">na.omit</span>(airquality<span class="sc">$</span>Temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 9.46527</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(<span class="fu">na.omit</span>(airquality<span class="sc">$</span>Temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 56</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(<span class="fu">na.omit</span>(airquality<span class="sc">$</span>Temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 97</code></pre>
+<pre><code>Rows: 336,776
+Columns: 19
+$ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2…
+$ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ dep_time       &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 558, …
+$ sched_dep_time &lt;int&gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 600, 600, …
+$ dep_delay      &lt;dbl&gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2, -1…
+$ arr_time       &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 849,…
+$ sched_arr_time &lt;int&gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 745, 851,…
+$ arr_delay      &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7, -1…
+$ carrier        &lt;chr&gt; "UA", "UA", "AA", "B6", "DL", "UA", "B6", "EV", "B6", "…
+$ flight         &lt;int&gt; 1545, 1714, 1141, 725, 461, 1696, 507, 5708, 79, 301, 4…
+$ tailnum        &lt;chr&gt; "N14228", "N24211", "N619AA", "N804JB", "N668DN", "N394…
+$ origin         &lt;chr&gt; "EWR", "LGA", "JFK", "JFK", "LGA", "EWR", "EWR", "LGA",…
+$ dest           &lt;chr&gt; "IAH", "IAH", "MIA", "BQN", "ATL", "ORD", "FLL", "IAD",…
+$ air_time       &lt;dbl&gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149, 1…
+$ distance       &lt;dbl&gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 733, …
+$ hour           &lt;dbl&gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6, 6…
+$ minute         &lt;dbl&gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 0…
+$ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-01 0…</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">na.omit</span>(airquality<span class="sc">$</span>Ozone))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>flight1 <span class="ot">&lt;-</span> flights<span class="sc">|&gt;</span><span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dist_tbl <span class="ot">&lt;-</span> flight1<span class="sc">|&gt;</span><span class="fu">group_by</span>(carrier)<span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">mean_distance =</span> <span class="fu">mean</span>(distance),<span class="at">sd_distance =</span> <span class="fu">sd</span>(distance) )</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dist_tbl<span class="sc">|&gt;</span><span class="fu">arrange</span>(mean_distance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 42.12931</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(<span class="fu">na.omit</span>(airquality<span class="sc">$</span>Ozone))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 32.98788</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(<span class="fu">na.omit</span>(airquality<span class="sc">$</span>Ozone))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(<span class="fu">na.omit</span>(airquality<span class="sc">$</span>Ozone))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 168</code></pre>
+<pre><code># A tibble: 16 × 3
+   carrier mean_distance sd_distance
+   &lt;chr&gt;           &lt;dbl&gt;       &lt;dbl&gt;
+ 1 YV               229          0  
+ 2 9E               476.       334. 
+ 3 EV               522.       294. 
+ 4 US               536.       553. 
+ 5 MQ               566.       223. 
+ 6 FL               691.       142. 
+ 7 OO               733         NA  
+ 8 WN               942.       496. 
+ 9 B6              1062.       681. 
+10 DL              1220.       644. 
+11 AA              1350.       626. 
+12 UA              1462.       778. 
+13 F9              1620          0  
+14 AS              2402          0  
+15 VX              2495.        98.2
+16 HA              4983          0  </code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span>,<span class="at">ncol =</span> <span class="dv">1</span>,<span class="at">nrow =</span> <span class="dv">50</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(A,<span class="fu">matrix</span>(cars<span class="sc">$</span>speed,<span class="at">ncol=</span><span class="dv">1</span>))</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">matrix</span>(cars<span class="sc">$</span>dist,<span class="at">ncol=</span><span class="dv">1</span>)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x,y){</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  beta <span class="ot">&lt;-</span> <span class="fu">solve</span>(<span class="fu">t</span>(x)<span class="sc">%*%</span> x) <span class="sc">%*%</span> (<span class="fu">t</span>(x) <span class="sc">%*%</span> y)</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">'coefficients'</span><span class="ot">=</span> beta))</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">f</span>(X,Y)</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>flight1<span class="sc">|&gt;</span><span class="fu">filter</span>(carrier <span class="sc">==</span> <span class="st">"OO"</span>)<span class="sc">|&gt;</span><span class="fu">select</span>(distance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>$coefficients
-           [,1]
-[1,] -17.579095
-[2,]   3.932409</code></pre>
+<pre><code># A tibble: 1 × 1
+  distance
+     &lt;dbl&gt;
+1      733</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>flight1<span class="sc">|&gt;</span><span class="fu">filter</span>(carrier <span class="sc">==</span> <span class="st">"YV"</span>)<span class="sc">|&gt;</span><span class="fu">select</span>(distance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 46 × 1
+   distance
+      &lt;dbl&gt;
+ 1      229
+ 2      229
+ 3      229
+ 4      229
+ 5      229
+ 6      229
+ 7      229
+ 8      229
+ 9      229
+10      229
+# ℹ 36 more rows</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>carspeedlm <span class="ot">&lt;-</span> <span class="fu">lm</span>(cars<span class="sc">$</span>dist <span class="sc">~</span> cars<span class="sc">$</span>speed)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(carspeedlm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dep_delay_mean <span class="ot">&lt;-</span> flights<span class="sc">|&gt;</span> <span class="fu">group_by</span>(month,carrier)<span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">average_delay =</span> <span class="fu">mean</span>(dep_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),<span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>dep_delay_mean<span class="sc">|&gt;</span><span class="fu">pivot_wider</span>(<span class="at">names_from =</span> carrier,<span class="at">values_from =</span> average_delay)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = cars$dist ~ cars$speed)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--29.069  -9.525  -2.272   9.215  43.201 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) -17.5791     6.7584  -2.601   0.0123 *  
-cars$speed    3.9324     0.4155   9.464 1.49e-12 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 15.38 on 48 degrees of freedom
-Multiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 
-F-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12</code></pre>
+<pre><code># A tibble: 12 × 17
+   month  `9E`    AA     AS    B6    DL    EV    F9    FL    HA    MQ    OO
+   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1     1 16.9   6.93  7.35   9.49  3.85 24.2  10     1.97 54.4   6.49 67   
+ 2     2 16.5   8.28  0.722 13.8   5.54 21.5  29.8   5.18 17.4   8.09 NA   
+ 3     3 13.4   8.70  8.42  14.2   9.93 26.2  16.8  17.3   1.16  7.19 NA   
+ 4     4 13.6  11.7  11.3   15.2   8.17 22.8  24.6  13.1  -2.1  13.7  NA   
+ 5     5 22.7   9.66  6.77   9.78  9.74 20.2  35.9  19.2  -1.45 13.9  NA   
+ 6     6 29.0  14.6  13.1   20.4  18.7  25.5  29.4  38.8   1.47 20.8  61   
+ 7     7 31.4  12.1   2.42  24.9  20.6  26.5  31.8  41.2  -1.71 20.7  NA   
+ 8     8 17.3   7.17  2.87  15.7   9.85 16.3  22.2  23.4   1.68 10.1  64   
+ 9     9  7.75  5.69 -4.52   6.63  5.53  8.24  8.26 16.9  -5.44  5.35 -4.94
+10    10  9.33  3.00  0.677  2.96  3.42 13.4   9.70 13.7  -5.10  4.48 NA   
+11    11  7.56  3.10  3.08   3.52  2.85  9.83 13.5  16.9  -5.44  3.28  0.8 
+12    12 19.8  11.7  18.0   17.0  10.8  27.9  13.1  26.1  -3.14 12.7  NA   
+# ℹ 5 more variables: UA &lt;dbl&gt;, US &lt;dbl&gt;, VX &lt;dbl&gt;, WN &lt;dbl&gt;, YV &lt;dbl&gt;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(carspeedlm<span class="sc">$</span>coefficients,<span class="dv">5</span>) <span class="sc">==</span> <span class="fu">round</span>(b<span class="sc">$</span>coefficients,<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>flight_ontime <span class="ot">&lt;-</span> flights<span class="sc">|&gt;</span><span class="fu">filter</span>(dep_delay<span class="sc">&gt;</span><span class="dv">0</span>, arr_delay<span class="sc">&lt;=</span><span class="dv">0</span>)<span class="sc">|&gt;</span><span class="fu">summarise</span>(<span class="at">proportion =</span> <span class="fu">n</span>()<span class="sc">/</span><span class="fu">nrow</span>(flights))<span class="sc">|&gt;</span> <span class="fu">pull</span>(proportion)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>flight_ontime</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     [,1]
-[1,] TRUE
-[2,] TRUE</code></pre>
+<pre><code>[1] 0.1052391</code></pre>
 </div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>multi_airline_routes <span class="ot">&lt;-</span> flights <span class="sc">|&gt;</span> <span class="fu">group_by</span>(origin, dest) <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="fu">n_distinct</span>(carrier) <span class="sc">&gt;</span> <span class="dv">1</span>) <span class="sc">|&gt;</span> <span class="fu">distinct</span>(origin, dest) <span class="sc">|&gt;</span> <span class="fu">ungroup</span>()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>multi_airline_routes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 128 × 2
+   origin dest 
+   &lt;chr&gt;  &lt;chr&gt;
+ 1 JFK    MIA  
+ 2 LGA    ATL  
+ 3 EWR    ORD  
+ 4 EWR    FLL  
+ 5 LGA    IAD  
+ 6 JFK    MCO  
+ 7 LGA    ORD  
+ 8 JFK    TPA  
+ 9 JFK    LAX  
+10 EWR    SFO  
+# ℹ 118 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>route_performance <span class="ot">&lt;-</span> flights <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="fu">paste</span>(origin, dest) <span class="sc">%in%</span> <span class="fu">paste</span>(multi_airline_routes<span class="sc">$</span>origin, multi_airline_routes<span class="sc">$</span>dest)) <span class="sc">|&gt;</span> <span class="fu">group_by</span>(origin, dest, carrier) <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">avg_arr_delay =</span> <span class="fu">mean</span>(arr_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span>  ) <span class="sc">|&gt;</span> <span class="fu">left_join</span>(airlines, <span class="at">by =</span> <span class="st">"carrier"</span>) <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">airline =</span> name)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>route_performance</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 343 × 5
+   origin dest  carrier avg_arr_delay airline                 
+   &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;                   
+ 1 EWR    ATL   9E              -6.25 Endeavor Air Inc.       
+ 2 EWR    ATL   DL              10.0  Delta Air Lines Inc.    
+ 3 EWR    ATL   EV              19.5  ExpressJet Airlines Inc.
+ 4 EWR    ATL   UA              10.5  United Air Lines Inc.   
+ 5 EWR    AUS   UA               4.28 United Air Lines Inc.   
+ 6 EWR    AUS   WN             -11.2  Southwest Airlines Co.  
+ 7 EWR    BDL   EV               6.78 ExpressJet Airlines Inc.
+ 8 EWR    BDL   UA              22.6  United Air Lines Inc.   
+ 9 EWR    BNA   EV              17.7  ExpressJet Airlines Inc.
+10 EWR    BNA   WN              -2.13 Southwest Airlines Co.  
+# ℹ 333 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>best_worst <span class="ot">&lt;-</span> route_performance <span class="sc">|&gt;</span>  <span class="fu">group_by</span>(origin, dest) <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="fu">n</span>() <span class="sc">&gt;=</span> <span class="dv">2</span>) <span class="sc">|&gt;</span>  <span class="fu">summarise</span>( <span class="at">best_airline =</span> airline[<span class="fu">which.min</span>(avg_arr_delay)], <span class="at">worst_airline =</span> airline[<span class="fu">which.max</span>(avg_arr_delay)], <span class="at">performance_gap =</span> <span class="fu">max</span>(avg_arr_delay) <span class="sc">-</span> <span class="fu">min</span>(avg_arr_delay), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(performance_gap))</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>best_worst</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 128 × 5
+   origin dest  best_airline           worst_airline            performance_gap
+   &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;                  &lt;chr&gt;                              &lt;dbl&gt;
+ 1 JFK    ATL   Endeavor Air Inc.      ExpressJet Airlines Inc.           127. 
+ 2 LGA    XNA   Envoy Air              ExpressJet Airlines Inc.           112. 
+ 3 LGA    ORD   American Airlines Inc. SkyWest Airlines Inc.              108. 
+ 4 LGA    MSY   Endeavor Air Inc.      ExpressJet Airlines Inc.           102. 
+ 5 EWR    STL   Southwest Airlines Co. United Air Lines Inc.               96.4
+ 6 LGA    MSP   Delta Air Lines Inc.   Endeavor Air Inc.                   95.7
+ 7 EWR    DTW   United Air Lines Inc.  SkyWest Airlines Inc.               67.5
+ 8 LGA    ATL   Delta Air Lines Inc.   ExpressJet Airlines Inc.            56.7
+ 9 LGA    PBI   American Airlines Inc. ExpressJet Airlines Inc.            53.3
+10 LGA    IND   Delta Air Lines Inc.   ExpressJet Airlines Inc.            47.2
+# ℹ 118 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>worst_route <span class="ot">&lt;-</span> best_worst <span class="sc">|&gt;</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(performance_gap)) <span class="sc">&gt;</span>  <span class="fu">head</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 </main>

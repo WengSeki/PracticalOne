@@ -1,0 +1,56 @@
+---
+title: "Prac 2"
+format: html
+editor: visual
+---
+
+
+```{r}
+set.seed(1)
+x <- 1:100
+e <- rnorm(100,mean = 0, sd = 0.2)
+y <- sin(x/10)+e
+```
+
+```{r}
+customLowess <- function(x,y,f){
+  if (f < 0 || f > 1) {
+    stop("Error: f must be between 0 and 1")
+  }
+  k <- round(f*length(x))
+  n <- length(x)
+  
+  distance <- matrix(NA, ncol = n,nrow = n)
+  index_of_neighbors <- matrix(NA, ncol = n,nrow = k)
+  smallest_four <- matrix(NA, ncol = n, nrow = k)
+  dmax <- matrix(NA, ncol = n, nrow = 1)
+  weight <- matrix(NA, ncol = n,nrow = k)
+  b <- matrix(NA, ncol = n, nrow = 2)
+  smoothed_y <- matrix(NA, ncol = 1, nrow = n)
+  
+  for (i in 1:n) {
+    distance[,i] <- abs(x[i]-x)
+    index_of_neighbors[,i] <- order(distance[,i])[1:k]
+    smallest_four[,i] <- distance[index_of_neighbors[,i],i]
+    dmax[i] <- max(smallest_four[,i])
+    weight[,i] <- (1-(smallest_four[,i]/dmax[i])^3)^3
+    
+    X <- cbind(1, x[index_of_neighbors[,i]])
+    W <- diag(weight[,i])
+    Y <- y[index_of_neighbors[,i]]
+    b[,i]<- (solve((t(X) %*% W %*% X), (t(X) %*% W %*% Y)))
+    smoothed_y[i,] <- b[1,i]+b[2,i] * x[i]
+  }
+  smoothed_function <- list(x=x,y=smoothed_y)
+  return (smoothed_function)
+}
+smoothed_1 <- customLowess(x,y,0.2)
+plot(smoothed_1)
+```
+
+```{r}
+smoothed_2 <- lowess(x,y,f = 0.2)
+plot(smoothed_2)
+```
+
+
